@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>Agenda</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+</head>
+
+
+
+<body>
+
+    <noscript>
+        <strong>We're sorry but agenda doesn't work properly without JavaScript enabled. Please enable it to
+            continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div id="sidebarCollapse" class="btn btn-info">
+                <span>Recolhe</span>
+            </div>
+            <div id="bem_vindo" class="sidebar-header text-center">
+                <h3>Olá</h3><br>
+                <h4>Jhonisson Gabriel</h4>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        Principal
+                    </a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">Consultas Agendadas</a>
+                        </li>
+                        <li>
+                            <a href="#">Marcar Consulta</a>
+                        </li>
+                        <li>
+                            <a href="#">Remarcar Consulta</a>
+                        </li>
+                        <li>
+                            <a href="#">Cancelar Consulta</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        Busca
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Especialista</a>
+                        </li>
+                        <li>
+                            <a href="#">Clínica</a>
+                        </li>
+                        <li>
+                            <a href="#">Médico</a>
+                        </li>
+                        <li>
+                            <a href="#">Região</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        Histórico
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Configuração
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Sair
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="content">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-6">
+                    <label>Selecione uma Especialidade</label>
+                    <select class="form-control" name="especialista_select" id="especialista_select">
+                        <option value="Acupuntura">Acupuntura</option>
+                        <option value="Alergia e Imunologia">Alergia e Imunologia</option>
+                        <option value="Anestesiologia">Anestesiologia</option>
+                        <option value="Angiologia">Angiologia</option>
+                        <option value="Cancerologia">Cancerologia</option>
+                        <option value="Cardiologia">Cardiologia</option>
+                        <option value="Cirurgia Cardiovascular">Cirurgia Cardiovascular</option>
+                        <option value="Cirurgia da Mão">Cirurgia da Mão</option>
+                        <option value="Cirurgia de Cabeça e Pescoço">Cirurgia de Cabeça e Pescoço</option>
+                        <option value="Cirurgia do Aparelho Digestivo">Cirurgia do Aparelho Digestivo</option>
+                        <option value="Cirurgia Geral">Cirurgia Geral</option>
+                        <option value="Cirurgia Pediátrica">Cirurgia Pediátrica</option>
+                        <option value="Cirurgia Plástica">Cirurgia Plástica</option>
+                        <option value="Cirurgia Torácica">Cirurgia Torácica</option>
+                        <option value="Cirurgia Vascular">Cirurgia Vascular</option>
+                        <option value="Clínica Médica">Clínica Médica</option>
+                        <option value="Coloproctologia">Coloproctologia</option>
+                        <option value="Dermatologia">Dermatologia</option>
+                        <option value="Endocrinologia e Metabologia">Endocrinologia e Metabologia</option>
+                        <option value="Endoscopia">Endoscopia</option>
+                        <option value="Gastroenterologia">Gastroenterologia</option>
+                        <option value="Genética Médica">Genética Médica</option>
+                        <option value="Geriatria">Geriatria</option>
+                        <option value="Ginecologia e Obstetrícia">Ginecologia e Obstetrícia</option>
+                        <option value="Hematologia e Hemoterapia">Hematologia e Hemoterapia</option>
+                        <option value="Homeopatia">Homeopatia</option>
+                        <option value="Infectologia">Infectologia</option>
+                        <option value="Mastologia">Mastologia</option>
+                        <option value="Medicina de Família e Comunidade">Medicina de Família e Comunidade</option>
+                        <option value="Medicina de Emergência">Medicina de Emergência</option>
+                        <option value="Medicina do Trabalho">Medicina do Trabalho</option>
+                        <option value="Medicina Esportiva">Medicina Esportiva</option>
+                        <option value="Medicina Física e Reabilitação">Medicina Física e Reabilitação</option>
+                        <option value="Medicina Intensiva">Medicina Intensiva</option>
+                        <option value="Medicina Legal e Perícia Médica">Medicina Legal e Perícia Médica</option>
+                        <option value="Medicina Nuclear">Medicina Nuclear</option>
+                        <option value="Medicina Preventiva e Social">Medicina Preventiva e Social</option>
+                        <option value="Nefrologia">Nefrologia</option>
+                        <option value="Neurocirurgia">Neurocirurgia</option>
+                        <option value="Neurologia">Neurologia</option>
+                        <option value="Nutrologia">Nutrologia</option>
+                        <option value="Obstetrícia">Obstetrícia</option>
+                        <option value="Oftalmologia">Oftalmologia</option>
+                        <option value="Ortopedia e Traumatologia">Ortopedia e Traumatologia</option>
+                        <option value="Otorrinolaringologia">Otorrinolaringologia</option>
+                        <option value="Patologia">Patologia</option>
+                        <option value="Patologia Clínica/Medicina Laboratorial">Patologia Clínica/Medicina
+                            Laboratorial</option>
+                        <option value="Pediatria">Pediatria</option>
+                        <option value="Pneumologia">Pneumologia</option>
+                        <option value="Psiquiatria">Psiquiatria</option>
+                        <option value="Radiologia e Diagnóstico por Imagem">Radiologia e Diagnóstico por Imagem
+                        </option>
+                        <option value="Radioterapia">Radioterapia</option>
+                        <option value="Reumatologia">Reumatologia</option>
+                        <option value="Urologia">Urologia</option>
+                    </select>
+
+                </div>
+                <div class="row">
+                    <br><button class="form-control" type="submit">Buscar</button>
+                </div>
+                <div class="col-3"></div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <!-- Page CONSULTA AGENDA  -->
+        <!--
+        <div id="content">
+
+            <h2 class="text-center">Consulta Agenda</h2>
+            <div class="row">
+
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><strong>Consulta com Dentista</strong></h5>
+                            <p class="card-text"><strong>Data: </strong>02/11/2019</p>
+                            <p class="card-text"><strong>Horário: </strong> 16:30h</p>
+                            <p class="card-text"><strong>Especialidade: </strong>Cirurgião Dentista</p>
+                            <p class="card-text"><strong>Médico(a): </strong> João Guilherme</p>
+                            <p class="card-text"><strong>Consultório: </strong>Clínica Vida </p>
+                            <p class="card-text"><strong>Local: </strong><br>
+                                Endereço: Rua XV de Novembro <br>
+                                Número: 560<br>
+                                Bairro: Centro <br>
+                                CEP: 12245-100 <br>
+                                Cidade: São José dos Campos</p>
+                            <p class="card-text"><strong>Contato: </strong><br>
+                                Telefone: (12) 3442-8230 <br>
+                                Telefone: (12) 98880-0808 <br>
+                                E-mail: contato@clinicavida.com.br <br>
+                                Site: https://www.clinicavida.com.br</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><strong>Consulta com Cardiologista</strong></h5>
+                            <p class="card-text"><strong>Data: </strong>03/11/2019</p>
+                            <p class="card-text"><strong>Horário: </strong> 10:00h</p>
+                            <p class="card-text"><strong>Especialidade: </strong>Cardiologista</p>
+                            <p class="card-text"><strong>Médico(a): </strong> Marilia dos Santos Cardoso da Silva</p>
+                            <p class="card-text"><strong>Consultório: </strong>Clínica Cardiovale </p>
+                            <p class="card-text"><strong>Local: </strong><br>
+                                Endereço: Rua Sebastião Humel <br>
+                                Número: 100<br>
+                                Andar: 6º <br>
+                                Sala: 680 <br>
+                                Bairro: Centro <br>
+                                CEP: 12245-000 <br>
+                                Cidade: São José dos Campos</p>
+                            <p class="card-text"><strong>Contato: </strong><br>
+                                Telefone: (12) 3442-9988 <br>
+                                Telefone: (12) 97880-4565 <br>
+                                E-mail: contato@cardiovale.com.br <br>
+                                Site: https://www.cardiovale.com.br</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>-->
+
+
+        <!-- Page PÁGINA PRINCIAL  -->
+        <!--
+        <div id="content">
+
+            <h2 class="text-center">Agenda</h2>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Consulta com Oftalmo</h5>
+                            <p class="card-text"><strong>Data: 25/11/2019</strong></p>
+                            <p class="card-text">A consulta será realizada na clinica ABC localizada na ...
+                            </p>
+                            <a href="#" class="btn btn-primary">Mais informações</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Consulta com Cardiologista</h5>
+                            <p class="card-text">Data: 25/11/2019</p>
+                            <p class="card-text">A consulta será realizada na clinica XPTO localizada na ...
+                            </p>
+                            <a href="#" class="btn btn-primary">Mais informações</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>-->
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                document.getElementById('sidebarCollapse').innerHTML
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
